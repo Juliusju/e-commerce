@@ -1,1 +1,1 @@
-# e-commerce
+This is an individual project. You can collaborate if you like.
