@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Page</title>
+    <style>
+        /* Basic CSS for the navigation bar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .container {
+            max-width: 960px;
+           /* margin: 0 auto; */
+            padding: 20px;
+        }
+        /* Dropdown menu styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        /* rendering items from the database */
+
+        .top-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .top {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 30%; /* Adjust the width as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Home Page</h1>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><input type="text" placeholder = "Search anything..."><a href="#">Search</a></li>
+                <li><a href ="#">Category</li>
+                <li class="dropdown">
+                    <a href="#">Account</a>
+                    <div class="dropdown-content">
+                        <a href="#">SIGN IN</a>
+                        <a href="#">My Accounts</a>
+                        <a href="#">My Orders</a>
+                        <a href="#">Saved Items</a>
+                    </div>
+                </li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Welcome to My Home Page</h2>
+        <p>This is a simple home page with a navigation bar.</p>
+    </div>
+
+    <h1>Men's Tops</h1>
+    <div class="top-container">
+        {% for top in mentop %}
+            <div class="top">
+                <img src="{{ top.image.url }}" alt="{{ top.name }}" width="200" height="200">
+                <h2>{{ top.name }}</h2>
+                <p>Size: {{ top.size }}</p>
+                <p>Quantity: {{ top.quantity }}</p>
+                <p>Description: {{ top.description|slice:":30" }}</p>
+                <p>Price: ${{ top.price }}</p>
+                
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
