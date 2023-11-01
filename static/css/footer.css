@@ -1,0 +1,62 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 10px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+   
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+}
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-media li {
+    margin-right: 20px; /* Add spacing between items */
+}
+
+.social-media li a {
+    display: flex;
+    align-items: center;
+    color: white;          /* Set link text color to white */
+    text-decoration: none; /* Remove text decoration (e.g., underlines) */
+}
+
+.social-media li a:hover {
+    text-decoration: underline;
+}
+
+.social-media li a img {
+    width: 30px; /* Adjust image width as needed */
+    height: auto; /* Maintain image aspect ratio */
+    margin-right: 5px; /* Add spacing between image and text */
+}

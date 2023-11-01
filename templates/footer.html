@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/footer.css'%}">
+</head>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <!-- Add about us content here -->
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <!-- Add contact information here -->
+            </div>
+            <div class="footer-section">
+                <h3>Help Center</h3>
+                <!-- Add help center content here -->
+            </div>
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <ul class="social-media">
+                    <li><a href="#"><img src="{% static 'images/twitter.png'%}" alt="twitter" height="10%" width="10%">Twitter</a></li>
+
+                    <li><a href="#"><img src="{% static 'images/facebook.png'%}" alt="Facebook" height="10%" width="10%">Facebook</a></li>
+
+                    <li><a href="#"><img src="{% static 'images/youtube.png'%}" alt="YouTube" height="10%" width="10%">YouTube</a></li>
+
+                    <li><a href="#"><img src="{% static 'images/whatsapp.png'%}" alt="WhatsApp" height="10%" width="10%">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
